@@ -1,0 +1,480 @@
+---
+title: "Designing Microbiome Trials"
+subtitle: "Gut Microbiota for Health World Summit"
+author: "Brendan J. Kelly, MD, MS"
+institute: "Infectious Diseases & Epidemiology<br><br>![](penn_logos/Penn-Shield-Logotype-White-over-Blue-RGB-Expanded.svg){width=160px}" 
+date: "12 March 2022" #"`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer-inferno-grids-fade.css
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    seal: false
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+
+---
+exclude: true
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringan::summon_remark()
+library(tidyverse)
+library(gt)
+
+```
+
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_webcam()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_animate_css()
+xaringanExtra::use_share_again()
+#xaringanExtra::use_scribble(pen_color = "#56106E")
+```
+
+---
+class: top left hide-count
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_dark.jpg)
+background-size: cover
+
+.move-top20[
+.title-text[<span style='font-size:0.75em'>Designing Microbiome Trials</span>]  
+.title-subtext[<span style='font-size:1.2em'>Unique Challenges & Considerations</span>]  
+]  
+  
+.callout-url-leftcorner[
+.title-nametext[
+Brendan J. Kelly, MD, MS  
+Infectious Diseases & Epidemiology  
+University of Pennsylvania  
+12 March 2022  
+]
+]
+
+.footnote-right[<span style='color: white'>photo: CDC @unsplash</span>]  
+
+
+
+---
+
+## Disclosures  
+
+.pad-left[  
+
+- No conflicts of interest.  
+
+- Research supported by:
+
+    - NIAID K23 AI121485  
+    
+    - CDC BAA 200-2016-91964  
+    
+    - CDC BAA 200-2016-91937  
+    
+    - CDC BAA 200-2018-02919  
+    
+    - CDC BAA 200-2021-10986   
+
+]
+
+
+---
+
+## Understanding and Misunderstanding RCTs  
+
+.pad-left[  
+  
+- Randomized controlled trials = gold standard for clinical research:    
+  
+    - balance known & unknown confounders       
+    
+    - powerful tool for causal inference    
+        
+- RCTs can still mislead us:  
+
+    - selection bias (subjects ≠ population)
+
+    - "trial interventions are interactions"  
+    (subject features modify effect of trial intervention)
+
+    - "subjects aren't even representative of themselves"  
+    (time-varying features can interact with trial intervention)
+   
+]
+
+.footnote-left[Deaton & Cartwright _Social Science & Medicine_ 2018; Andrew Gelman] 
+
+
+---
+
+## Research Objectives    
+  
+.pad-left[  
+  
+- How do antibiotics fail?  
+  
+    - failure of pathogen identification → wrong antibiotic       
+    
+    - high-grade phenotypic resistance or inadequate source control    
+    
+    - <u>post-antibiotic repopulation</u>  
+    
+- Bacterial ecology of infection: VAP, _C. difficile_  
+  
+- Microbiome change during & after antibiotics   
+  
+- Engineering post-antibiotic repopulation      
+  
+    
+]  
+
+
+
+---
+exclude: true
+class: top left hide-count
+background-image: url(img/yudi-haryasa-HEpUyHwJuzQ-unsplash.jpeg)
+background-size: cover
+
+## <span style='color: #093b85;'>Introduction: Island Ecology</span>
+
+
+.footnote-right[<span style='color: white'>photo: Yudi Haryasa @unsplash</span>]  
+
+
+
+---
+exclude: true
+class: hide-count
+
+.pull-left[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='55%'}
+knitr::include_graphics(path = "img/tibg_title_authors.png")
+
+```
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics(path = "img/tibg_figure7_equilibrium_model.png")
+
+```
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig3map.png")
+
+```
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_tab1.png")
+
+```
+
+]
+
+
+.footnote-left[Macarthur & Wilson 1967; Simberloff & Wilson _Ecology_ 1969]
+
+
+
+---
+exclude: true
+class: hide-count
+
+.pull-left[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig2.png")
+# ![](img/wilson_simberloff_ecology_1969_fig2.png)
+
+```
+
+
+]
+
+.pull-right[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8.png")
+# ![](img/wilson_simberloff_ecology_1969_fig8.png)
+
+```
+
+]
+
+
+.footnote-left[Wilson & Simberloff _Ecology_ 1969]
+
+
+
+---
+exclude: true
+class: hide-count
+
+.pull-left[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8_crop.png")
+
+```
+
+
+]
+
+.pull-right[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='60%'}
+knitr::include_graphics(path = "img/simberloff_wilson_ecology_1969_fig1_fig2.png")
+
+```
+
+]
+
+
+.footnote-left[Wilson & Simberloff _Ecology_ 1969; Simberloff & Wilson _Ecology_ 1969]
+
+
+
+---
+exclude: true
+class: hide-count
+
+.pull-left[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
+knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8_crop.png")
+
+```
+
+]
+
+.pull-right[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+knitr::include_graphics(path = "img/icu_patient_and_doc_crop.png")
+
+```
+
+]
+
+.footnote-left[Wilson & Simberloff _Ecology_ 1969; photo: _New York Times_]
+
+
+
+---
+
+## Repopulation & Recurrent Infection      
+  
+.pad-left[  
+  
+- Why does <u>post-antibiotic repopulation</u> matter?    
+
+- Failed repopulation risks recurrent infection:  
+
+    - healthy subjects time to post-antibiotic repopulation ~ 3 months
+    
+    - recurrent _C. difficile_ infection (R-CDI): ~ 20% post-treatment recurrence
+  
+    - bloodstream, respiratory and urinary tract infections?     
+    
+    
+]  
+
+.footnote-left[Blaser _Science_ 2016; Raymond et al _ISME J_ 2016; Kelly & Tebas _Chest_ 2018; Al-Hasan et al _J Infect_ 2010; Jensen et al _CMI_ 2011; Munoz et al _CMI_ 2016]  
+
+
+---
+exclude: true
+
+## Repopulation & Recurrent Infection      
+  
+.pad-left[  
+  
+- Study of post-infection recurrence:  
+
+    - 10,855 heme-onc patients admitted to HUP from 2010-2011      
+
+    - 7819 (72%) with blood, respiratory, or urine culture obtained
+    
+    - 1042 (9.6%) +blood cx, 215 (2.0%) +resp cx, 845 (7.8%) +urine cx  
+    
+    - same genus recurrence: 286 (28.6%) blood, 58 (29.0%) resp, 272 (34.0%) urine  
+    
+    - other genus recurrence: 208 (20.8%) blood, 35 (17.5%) resp, 88 (11.0%) urine  
+    
+    - examine time to post-infection recurrence ...       
+  
+    
+]  
+
+.footnote-left[Ziegler MJ et al. Submitted.]  
+
+
+---
+
+## Repopulation & Recurrent Infection      
+  
+.pad-left[  
+  
+- Study of post-infection recurrence:  
+
+    - 10,855 heme-onc patients admitted to HUP from 2010-2021      
+
+    - 7819 (72%) with blood, respiratory, or urine culture obtained:  
+    
+```{r, warning=FALSE, error=FALSE, echo=FALSE, message=FALSE}
+
+tribble(~ "Infection", ~ "Total Subjects", ~ "Recurrent - Same Genus", ~ "Recurrent - Different Genus",
+        "Bloodstream", "1042 (9.6%)", "286 (28.6%)", "208 (20.8%)",
+        "Respiratory", "215 (2.0%)", "58 (29.0%)", "35 (17.5%)",
+        "Urine", "845 (7.8%)", "272 (34.0%)", "88 (11.0%)") %>%
+  gt() %>%
+  tab_options(column_labels.font.size = 20,
+              column_labels.font.weight = "bold",
+              table.font.size = 20)
+
+```
+  
+- Examine time to post-infection recurrence ...       
+  
+]  
+
+.footnote-left[Ziegler MJ et al. Manuscript in preparation.]  
+
+
+---
+background-image: url(figs/p_hurdle_gap_same_vs_other_genus_tp.png)
+background-size: contain
+
+
+
+.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
+
+
+---
+background-image: url(figs/p_hurdle_gap_same_genus_f_cxtype_r_genus_after14_tp.png)
+background-size: contain
+
+
+
+.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
+
+
+
+---
+background-image: url(figs/p_abx.png)
+background-size: contain
+
+
+
+.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
+
+
+
+---
+
+## Future Directions      
+  
+.pad-left[  
+  
+- <u>Post-antibiotic repopulation</u>:      
+
+    - demographic features → recurrent infection risk  
+    
+    - oncology diagnosis → recurrent infection risk  
+    
+    - antibiotic exposure → repopulation → recurrent infection risk  
+
+
+]  
+
+.footnote-left[Davar et al _Science_ 2021; Schubert et al _Frontiers Immun_ 2021; Cubillos-Ruiz et al _Nat Rev Drug Disc_ 2021]  
+
+
+
+---
+
+## Work to Understand Repopulation        
+  
+.pad-left[  
+  
+- Bacterial ecology of infection:
+
+    - ventilator-associated pneumonia (VAP)  
+    
+    - _C. difficile_ infection  
+  
+- Microbiome change during & after antibiotics    
+  
+- Engineering post-antibiotic repopulation:  
+
+    - antibiotic conditioning & transplant  
+    
+    - *post-induction consolidation therapy with bacteriophage*    
+  
+]  
+
+
+---
+exclude: true
+
+## Acknowledgements    
+
+.pull-left[
+- __ARES Group @ Penn__
+Sean Loughrey, Laura Cowden, Laurel Glaser, Kyle Rodino,   
+Magda Wernovsky, Emily Reesey, Erik Clarke, Michael David,
+Matt Ziegler, Lauren Dutcher, Ebbing Lautenbach, Jim Harrigan, Hatem Abdallah
+
+- __Bushman Laboratory @ Penn__
+Arwa Abbas, Aoife Roche, Andrew Marques,
+Aubrey Bailey, Jacob Leiby,
+Rick Bushman
+
+- __PennCHOP Microbiome Program__
+Lisa Mattei, Casey Hofstaedter, Huanjia Zhang, Kyle Bittinger
+
+]
+
+
+.pull-right[
+- __Collman Laboratory @ Penn__
+Ize Imai, Aurea Simon Soro, John McGinniss, Ron Collman
+
+- __Division of ID @ Penn__
+Ian Frank, Pablo Tebas, Robert Gross, Emily Blumberg
+
+- __Rutgers University & Penn DBEI__
+Jason Roy, Arman Oganisian
+  
+- __CDC Prevention Epicenters__
+Clifford McDonald, Alison Laufer Halpin
+  
+- __Funding__
+<u>CDC</u>: BAAs 200-2016-91964, 200-2018-02919, 200-2021-10986,
+200-2021-10986 & <u>NIAID</u>: K23 AI121485
+
+]
+
+.center[
+### brendank@pennmedicine.upenn.edu
+]
+
+
+
+---
+class: middle center hide-count
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_dark.jpg)
+background-size: cover
+
+.title-subtext[Questions?]
+
+.callout-url-bottom[  
+.fade-in[<span style="font-size:0.5em; color:white">slides ↓ </span>]  
+<span style="link-color:white">[bjklab.org](http://www.bjklab.org)</span>  
+]  
+
+
