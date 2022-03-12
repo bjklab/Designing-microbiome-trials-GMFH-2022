@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Designing Microbiome Trials: Gut Microbiota for Health World Summit 2022</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Brendan J. Kelly, MD, MS" />
+    <meta name="date" content="2022-03-12" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link rel="stylesheet" href="xaringan-themer-inferno-grids-fade.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+exclude: true
+
+
+
+
+
+---
+class: top left hide-count
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_darkest.jpg)
+background-size: cover
+
+.move-top20[
+.title-text[&lt;span style='font-size:0.75em'&gt;Designing Microbiome Trials&lt;/span&gt;]  
+.title-subtext[&lt;span style='font-size:1.2em'&gt;Unique Challenges &amp; Considerations&lt;/span&gt;]  
+]  
+  
+.callout-url-leftcorner[
+.title-nametext[
+Brendan J. Kelly, MD, MS  
+Infectious Diseases, Microbiology &amp; Epidemiology  
+University of Pennsylvania  
+
+GMFH World Summit  
+12 March 2022
+]
+]
+
+.footnote-right[&lt;span style='color: white'&gt;photo: CDC @unsplash&lt;/span&gt;]  
+
+
+
+---
+
+## Disclosures  
+
+.pad-left[  
+
+- No conflicts of interest.  
+
+- Research supported by:
+
+    - NIAID K23 AI121485  
+    
+    - CDC BAA 200-2016-91964  
+    
+    - CDC BAA 200-2016-91937  
+    
+    - CDC BAA 200-2018-02919  
+    
+    - CDC BAA 200-2021-10986   
+
+]
+
+
+---
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-a animated flipInY"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-b animated flipInX"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-b"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-c animated bounceInDown"&gt;&lt;div&gt;Strategies for&lt;br&gt;the LBP Era&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-a"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Strategies for&lt;br&gt;the LBP Era&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+---
+
+## "Understanding and Misunderstanding RCTs"  
+
+.pad-left[  
+  
+- Randomized clinical trials = gold standard for clinical research:    
+  
+    - balance known &amp; unknown confounders       
+    
+    - powerful tool to measure causal effects    
+        
+- RCTs can still mislead:  
+
+    - selection bias (subjects ≠ population)
+
+    - "trial interventions are interactions" resulting in heterogenous effects    
+    (subject features modify effect of trial intervention)  
+
+    - "subjects aren't even fully representative of themselves"  
+    (&lt;u&gt;time-varying features&lt;/u&gt; also interact with trial intervention)
+   
+]
+
+.footnote-left[Deaton &amp; Cartwright _Social Science &amp; Medicine_ 2018; Andrew Gelman] 
+
+
+---
+
+## Time-Varying Gut Microbiota  
+
+&lt;img src="./img/kelly_bioinf_2016.png" width="110%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote-left[Kelly et al _Bioinformatics_ 2015] 
+
+
+---
+
+## Time-Varying Gut Microbiota  
+
+.pad-left[  
+  
+- Dietary changes and antibiotics exert large effects...  
+
+ ... larger effects when followed by colonization from healthcare environment   
+
+- Gut microbiota at time of intervention ≠ microbiota at time of enrollment:  
+
+    - misclassification of inclusion criteria kills randomized trials  
+    
+    - "the medicine doesn't work if the patient isn't sick"  
+    
+    - microbiome trials run a **high risk of eligibility misclassification**   
+
+]  
+
+
+.footnote-left[Kelly et al _ICHE_ 2021] 
+
+
+---
+
+## How Microbiota Trials Go &lt;u&gt;Right&lt;/u&gt;  
+
+.pad-left[
+
+- RCTs can overcome effect modification by changing gut microbiota if:  
+
+    - very precise disease phenotype (less likely time-varying gut microbiota)  
+    
+    - precision medicine: tailor treatment to near-real-time measures of gut microbiota  
+    
+    - interventions with huge effects (antibiotic conditioning prior to FMT)  
+  
+]
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-b"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;Strategies for&lt;br&gt;the LBP Era&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+---
+
+## Fecal Microbiota Transplant (FMT) Trials      
+  
+.pad-left[  
+  
+- FMT in Infectious Diseases @ the University of Pennsylvania:  
+  
+    - FMT dose finding for recurrent _C. difficile_ infection (NCT03973697) 
+    
+    - serial FMT for severe _C. difficile_ infection (NCT03970200)         
+    
+    - FMT for MDRO colonization (CDC sponsored)    
+    
+- Successful applications of FMT:     
+  
+    - recurrent &amp; severe _C. difficile_, inflammatory bowel diseases, potentiation of anti-PD1 immunotherapy, MDRO colonization, food allergy mitigation  
+    
+    - heterogeneity of gut microbiota community composition?  
+    
+]  
+
+
+
+---
+
+### Microbial Heterogeneity in _C. difficile_  
+
+.pad-left[  
+  
+- **Aim**: microbiome features that discriminate _C. difficile_ colonization / infection    
+
+- **Population**: 384 consecutive positive _C. difficile_ tests (in- &amp; outpatient)   
+    
+<div id="ayevuxzafa" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ayevuxzafa .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #000000;
+}
+
+#ayevuxzafa .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #000000;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #000000;
+}
+
+#ayevuxzafa .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ayevuxzafa .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ayevuxzafa .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#ayevuxzafa .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ayevuxzafa .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ayevuxzafa .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ayevuxzafa .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ayevuxzafa .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ayevuxzafa .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ayevuxzafa .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ayevuxzafa .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+  vertical-align: middle;
+}
+
+#ayevuxzafa .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ayevuxzafa .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ayevuxzafa .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #000000;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #000000;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ayevuxzafa .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #000000;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ayevuxzafa .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ayevuxzafa .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ayevuxzafa .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ayevuxzafa .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #000000;
+}
+
+#ayevuxzafa .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ayevuxzafa .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#ayevuxzafa .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ayevuxzafa .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+}
+
+#ayevuxzafa .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ayevuxzafa .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #000000;
+}
+
+#ayevuxzafa .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ayevuxzafa .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ayevuxzafa .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ayevuxzafa .gt_sourcenote {
+  font-size: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ayevuxzafa .gt_left {
+  text-align: left;
+}
+
+#ayevuxzafa .gt_center {
+  text-align: center;
+}
+
+#ayevuxzafa .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ayevuxzafa .gt_font_normal {
+  font-weight: normal;
+}
+
+#ayevuxzafa .gt_font_bold {
+  font-weight: bold;
+}
+
+#ayevuxzafa .gt_font_italic {
+  font-style: italic;
+}
+
+#ayevuxzafa .gt_super {
+  font-size: 65%;
+}
+
+#ayevuxzafa .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#ayevuxzafa .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ayevuxzafa .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#ayevuxzafa .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#ayevuxzafa .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"><i>C. difficile</i><br>Category</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Subject<br>Count</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Proportion</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">GDH+ Toxin EIA- NAAT-</td>
+<td class="gt_row gt_right">94</td>
+<td class="gt_row gt_right">24.5%</td></tr>
+    <tr><td class="gt_row gt_left">GDH+ Toxin EIA- NAAT+</td>
+<td class="gt_row gt_right">213</td>
+<td class="gt_row gt_right">55.5%</td></tr>
+    <tr><td class="gt_row gt_left">GDH+ Toxin EIA+</td>
+<td class="gt_row gt_right">77</td>
+<td class="gt_row gt_right">20.1%</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+    
+- **Sampling**: stool 16S rRNA gene sequencing &amp; 16S rRNA gene qPCR  
+    
+- **Comparison**: toxin EIA+ (infection) versus NAAT+ only (colonization)     
+    
+- **Outcome**: EIA+, with fecal lactoferrin as sensitivity analysis    
+  
+]  
+
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+
+---
+background-image: url(figs/p_toxineia_clostridioides_boxplot_tp.png)
+background-size: 65%
+
+
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+---
+background-image: url(figs/p_cdi_cat_fecal_lacto_boxplot_tp.png)
+background-size: 65%
+
+
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+
+---
+
+## Phenotype Definitions &amp; FMT Outcomes  
+
+.pad-left[  
+
+- The success of FMT depends on homogeneity of gut microbiota phenotype:  
+
+    - moderate heterogeneity of _C. difficile_ infection  
+    
+    - large heterogeneity across IBD  
+
+- Pre-FMT antibiotic conditioning as a method to enforce homogeneity:  
+
+    - which antibiotics are used?
+    
+    - effects of other medications active on gut microbiota (e.g., PPIs)?
+
+    - FMT as part of a bundled intervention?
+
+]
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-grey"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-c"&gt;&lt;div&gt;Strategies for&lt;br&gt;the LBP Era&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+---
+
+## Into the LBP Era  
+
+.pad-left[
+
+- Live biotherapeutic products (LBPs) replacing FMT:  
+
+    - Ferring, Seres, Vedanta, Finch...  
+    
+    - ensure greater homogeneity of intervention
+    
+    - larger effects?  
+
+- Are bundled interventions still necessary?  
+
+    - role for pre-LBP antibiotic conditioning?  
+    
+    - restrictions on medications that reshape gut microbial communities?
+    
+    - role for precision medicine &amp; pre-treatment microbiota profiles?  
+
+]
+
+
+---
+layout: false
+class: full-screen hide-count
+
+&lt;div class="grid-3-1"&gt;
+&lt;div class="extension-tile gridset-a animated flipInY"&gt;&lt;div&gt;How Randomized Trials Go Wrong&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-b animated flipInX"&gt;&lt;div&gt;RCTs of FMT&lt;/div&gt;&lt;/div&gt;
+&lt;div class="extension-tile gridset-c animated flipInY"&gt;&lt;div&gt;Strategies for&lt;br&gt;the LBP Era&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+---
+
+## Topics for Discussion    
+
+.pad-left[
+
+- Every RCT intervention is an interaction:
+
+    - gut microbiota community composition varies over time  
+    
+    - account for changes in diet &amp; medications, environment  
+
+- RCTs can overcome effect modification if:  
+
+    - very precise disease phenotype (less likely time-varying gut microbiota)  
+    
+    - precision medicine: tailor treatment to near-real-time measures of gut microbiota  
+    
+    - interventions with huge effects (antibiotic conditioning prior to FMT)  
+
+- How to translate lessons from FMT trials to the LBP era?   
+
+]
+
+
+
+---
+exclude: true
+
+## Acknowledgements    
+
+.pull-left[
+- __ARES Group @ Penn__
+Sean Loughrey, Laura Cowden, Laurel Glaser, Kyle Rodino,   
+Magda Wernovsky, Emily Reesey, Erik Clarke, Michael David,
+Matt Ziegler, Lauren Dutcher, Ebbing Lautenbach, Jim Harrigan, Hatem Abdallah
+
+- __Bushman Laboratory @ Penn__
+Arwa Abbas, Aoife Roche, Andrew Marques,
+Aubrey Bailey, Jacob Leiby,
+Rick Bushman
+
+- __PennCHOP Microbiome Program__
+Lisa Mattei, Casey Hofstaedter, Huanjia Zhang, Kyle Bittinger
+
+]
+
+
+.pull-right[
+- __Collman Laboratory @ Penn__
+Ize Imai, Aurea Simon Soro, John McGinniss, Ron Collman
+
+- __Division of ID @ Penn__
+Ian Frank, Pablo Tebas, Robert Gross, Emily Blumberg
+
+- __Rutgers University &amp; Penn DBEI__
+Jason Roy, Arman Oganisian
+  
+- __CDC Prevention Epicenters__
+Clifford McDonald, Alison Laufer Halpin
+  
+- __Funding__
+&lt;u&gt;CDC&lt;/u&gt;: BAAs 200-2016-91964, 200-2018-02919, 200-2021-10986,
+200-2021-10986 &amp; &lt;u&gt;NIAID&lt;/u&gt;: K23 AI121485
+
+]
+
+.center[
+### brendank@pennmedicine.upenn.edu
+]
+
+
+
+---
+class: middle center hide-count
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_darkest.jpg)
+background-size: cover
+
+.title-subtext[brendank@pennmedicine.upenn.edu]
+
+.callout-url-bottom[  
+.fade-in[&lt;span style="font-size:0.5em; color:white"&gt;slides ↓ &lt;/span&gt;]  
+&lt;span style="link-color:white"&gt;[bjklab.org](http://www.bjklab.org)&lt;/span&gt;  
+]  
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
