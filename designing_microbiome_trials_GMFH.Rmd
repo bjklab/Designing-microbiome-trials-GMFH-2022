@@ -346,7 +346,7 @@ class: full-screen hide-count
 
 - Live biotherapeutic products (LBPs) replacing FMT:  
 
-    - Seres, Rebiotix, Vedanta, Finch...  
+    - Ferring, Seres, Vedanta, Finch...  
     
     - ensure greater homogeneity of intervention
     
