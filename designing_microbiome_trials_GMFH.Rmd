@@ -50,7 +50,7 @@ background-size: cover
 .callout-url-leftcorner[
 .title-nametext[
 Brendan J. Kelly, MD, MS  
-Infectious Diseases & Epidemiology  
+Infectious Diseases, Microbiology & Epidemiology  
 University of Pennsylvania  
 
 GMFH World Summit  
@@ -86,18 +86,68 @@ GMFH World Summit
 
 
 ---
+class: full-screen hide-count
 
-## Understanding and Misunderstanding RCTs  
+<div class="grid-3-1">
+<div class="extension-tile gridset-a animated flipInY"><div>How Randomized Trials Go Wrong</div></div>
+</div>
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-b animated flipInX"><div>RCTs of FMT</div></div>
+</div>
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-b"><div>RCTs of FMT</div></div>
+<div class="extension-tile gridset-c animated bounceInDown"><div>Strategies for<br>the LBP Era</div></div>
+</div>
+
+
+
+
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-a"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-grey"><div>RCTs of FMT</div></div>
+<div class="extension-tile gridset-grey"><div>Strategies for<br>the LBP Era</div></div>
+</div>
+
+
+
+---
+
+## "Understanding and Misunderstanding RCTs"  
 
 .pad-left[  
   
-- Randomized controlled trials = gold standard for clinical research:    
+- Randomized clinical trials = gold standard for clinical research:    
   
     - balance known & unknown confounders       
     
-    - powerful tool for causal inference    
+    - powerful tool to measure causal effects    
         
-- RCTs can still mislead us:  
+- RCTs can still mislead:  
 
     - selection bias (subjects ≠ population)
 
@@ -110,6 +160,22 @@ GMFH World Summit
 ]
 
 .footnote-left[Deaton & Cartwright _Social Science & Medicine_ 2018; Andrew Gelman] 
+
+
+---
+
+## The Time-Varying Gut Microbiome    
+
+.pull-left[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
+knitr::include_graphics(path = "figs/kelly_iche_2021_cx.png")
+```
+
+]
+
+
+.footnote-left[Kelly et al _ICHE_ 2021]  
 
 
 ---
@@ -343,7 +409,7 @@ class: middle center hide-count
 background-image: url(img/cdc-QEU-QgIOJKA-unsplash_dark.jpg)
 background-size: cover
 
-.title-subtext[Questions?]
+.title-subtext[brendank@pennmedicine.upenn.edu]
 
 .callout-url-bottom[  
 .fade-in[<span style="font-size:0.5em; color:white">slides ↓ </span>]  
