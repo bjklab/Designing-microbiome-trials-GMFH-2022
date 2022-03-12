@@ -1,6 +1,6 @@
 ---
-title: "Designing Microbiome Trials"
-subtitle: "Gut Microbiota for Health World Summit"
+title: "Designing Microbiome Trials: Gut Microbiota for Health World Summit 2022"
+subtitle: ""
 author: "Brendan J. Kelly, MD, MS"
 institute: "Infectious Diseases & Epidemiology<br><br>![](penn_logos/Penn-Shield-Logotype-White-over-Blue-RGB-Expanded.svg){width=160px}" 
 date: "12 March 2022" #"`r format(Sys.Date(), '%d %B %Y')`"
@@ -52,7 +52,9 @@ background-size: cover
 Brendan J. Kelly, MD, MS  
 Infectious Diseases & Epidemiology  
 University of Pennsylvania  
-12 March 2022  
+
+GMFH World Summit  
+12 March 2022
 ]
 ]
 
@@ -112,7 +114,7 @@ University of Pennsylvania
 
 ---
 
-## Research Objectives    
+## The Promise of Fecal Microbiota Transplant (FMT)    
   
 .pad-left[  
   
@@ -132,135 +134,6 @@ University of Pennsylvania
   
     
 ]  
-
-
-
----
-exclude: true
-class: top left hide-count
-background-image: url(img/yudi-haryasa-HEpUyHwJuzQ-unsplash.jpeg)
-background-size: cover
-
-## <span style='color: #093b85;'>Introduction: Island Ecology</span>
-
-
-.footnote-right[<span style='color: white'>photo: Yudi Haryasa @unsplash</span>]  
-
-
-
----
-exclude: true
-class: hide-count
-
-.pull-left[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='55%'}
-knitr::include_graphics(path = "img/tibg_title_authors.png")
-
-```
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='75%'}
-knitr::include_graphics(path = "img/tibg_figure7_equilibrium_model.png")
-
-```
-
-]
-
-.pull-right[
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig3map.png")
-
-```
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_tab1.png")
-
-```
-
-]
-
-
-.footnote-left[Macarthur & Wilson 1967; Simberloff & Wilson _Ecology_ 1969]
-
-
-
----
-exclude: true
-class: hide-count
-
-.pull-left[
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig2.png")
-# ![](img/wilson_simberloff_ecology_1969_fig2.png)
-
-```
-
-
-]
-
-.pull-right[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8.png")
-# ![](img/wilson_simberloff_ecology_1969_fig8.png)
-
-```
-
-]
-
-
-.footnote-left[Wilson & Simberloff _Ecology_ 1969]
-
-
-
----
-exclude: true
-class: hide-count
-
-.pull-left[
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8_crop.png")
-
-```
-
-
-]
-
-.pull-right[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='60%'}
-knitr::include_graphics(path = "img/simberloff_wilson_ecology_1969_fig1_fig2.png")
-
-```
-
-]
-
-
-.footnote-left[Wilson & Simberloff _Ecology_ 1969; Simberloff & Wilson _Ecology_ 1969]
-
-
-
----
-exclude: true
-class: hide-count
-
-.pull-left[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
-knitr::include_graphics(path = "img/wilson_simberloff_ecology_1969_fig8_crop.png")
-
-```
-
-]
-
-.pull-right[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
-knitr::include_graphics(path = "img/icu_patient_and_doc_crop.png")
-
-```
-
-]
-
-.footnote-left[Wilson & Simberloff _Ecology_ 1969; photo: _New York Times_]
 
 
 
