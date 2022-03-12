@@ -452,7 +452,7 @@ class: middle center hide-count
 background-image: url(img/cdc-QEU-QgIOJKA-unsplash_darkest.jpg)
 background-size: cover
 
-.title-subtext[brendank@pennmedicine.upenn.edu]
+.title-subtext[Questions?]
 
 .callout-url-bottom[  
 .fade-in[<span style="font-size:0.5em; color:white">slides ↓ </span>]  
