@@ -193,7 +193,7 @@ knitr::include_graphics(path = "./img/kelly_bioinf_2016.png")
     
     - "the medicine doesn't work if the patient isn't sick"  
     
-    - microbiome trials run a **high risk of inclusion misclassification**   
+    - microbiome trials run a **high risk of eligibility misclassification**   
 
 ]  
 
@@ -233,24 +233,23 @@ class: full-screen hide-count
 
 ---
 
-## The Promise of Fecal Microbiota Transplant (FMT)    
+## Fecal Microbiota Transplant (FMT) Trials      
   
 .pad-left[  
   
-- How do antibiotics fail?  
+- FMT in Infectious Diseases @ the University of Pennsylvania:  
   
-    - failure of pathogen identification → wrong antibiotic       
+    - FMT dose finding for recurrent _C. difficile_ infection (NCT03973697) 
     
-    - high-grade phenotypic resistance or inadequate source control    
+    - serial FMT for severe _C. difficile_ infection (NCT03970200)         
     
-    - <u>post-antibiotic repopulation</u>  
+    - FMT for MDRO colonization (CDC sponsored)    
     
-- Bacterial ecology of infection: VAP, _C. difficile_  
+- Successful applications of FMT:     
   
-- Microbiome change during & after antibiotics   
-  
-- Engineering post-antibiotic repopulation      
-  
+    - recurrent & severe _C. difficile_, inflammatory bowel diseases, potentiation of anti-PD1 immunotherapy, MDRO colonization, food allergy mitigation  
+    
+    - heterogeneity of gut microbiota community composition?  
     
 ]  
 
@@ -258,24 +257,73 @@ class: full-screen hide-count
 
 ---
 
-## Repopulation & Recurrent Infection      
-  
+### Microbial Heterogeneity in _C. difficile_  
+
 .pad-left[  
   
-- Why does <u>post-antibiotic repopulation</u> matter?    
+- **Aim**: microbiome features that discriminate _C. difficile_ colonization / infection    
 
-- Failed repopulation risks recurrent infection:  
-
-    - healthy subjects time to post-antibiotic repopulation ~ 3 months
+- **Population**: 384 consecutive positive _C. difficile_ tests (in- & outpatient)   
     
-    - recurrent _C. difficile_ infection (R-CDI): ~ 20% post-treatment recurrence
+```{r, warning=FALSE, error=FALSE, echo=FALSE, message=FALSE}
+read_rds("./tabs/cd_specimen_count.rds") %>%
+    tab_options(column_labels.font.size = 16,
+                column_labels.font.weight = "bold",
+                table.font.size = 16) %>%
+  identity() -> cd_tab
+cd_tab
+```
+    
+- **Sampling**: stool 16S rRNA gene sequencing & 16S rRNA gene qPCR  
+    
+- **Comparison**: toxin EIA+ (infection) versus NAAT+ only (colonization)     
+    
+- **Outcome**: EIA+, with fecal lactoferrin as sensitivity analysis    
   
-    - bloodstream, respiratory and urinary tract infections?     
-    
-    
 ]  
 
-.footnote-left[Blaser _Science_ 2016; Raymond et al _ISME J_ 2016; Kelly & Tebas _Chest_ 2018; Al-Hasan et al _J Infect_ 2010; Jensen et al _CMI_ 2011; Munoz et al _CMI_ 2016]  
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+
+---
+background-image: url(figs/p_toxineia_clostridioides_boxplot_tp.png)
+background-size: 65%
+
+
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+---
+background-image: url(figs/p_cdi_cat_fecal_lacto_boxplot_tp.png)
+background-size: 65%
+
+
+.footnote-left[Tkatch et al _ASM World Microbiome Forum_ 2021]  
+
+
+
+---
+
+## Phenotype Definitions & FMT Outcomes  
+
+.pad-left[  
+
+- The success of FMT depends on homogeneity of gut microbiota phenotype:  
+
+    - moderate heterogeneity of _C. difficile_ infection  
+    
+    - large heterogeneity across IBD  
+
+- Pre-FMT antibiotic conditioning as a method to enforce homogeneity:  
+
+    - which antibiotics are used?
+    
+    - effects of other medications active on gut microbiota (e.g., PPIs)?
+
+    - FMT as part of a bundled intervention?
+
+]
 
 
 ---
@@ -292,9 +340,27 @@ class: full-screen hide-count
 
 ---
 
-## LBPs  
+## Into the LBP Era  
 
+.pad-left[
 
+- Live biotherapeutic products (LBPs) replacing FMT:  
+
+    - Seres, Rebiotix, Vedanta, Finch...  
+    
+    - ensure greater homogeneity of intervention
+    
+    - larger effects?  
+
+- Are bundled interventions still necessary?  
+
+    - role for pre-LBP antibiotic conditioning?  
+    
+    - restrictions on medications that reshape gut microbial communities?
+    
+    - role for precision medicine & pre-treatment microbiota profiles?  
+
+]
 
 
 ---
@@ -310,7 +376,27 @@ class: full-screen hide-count
 
 ---
 
-## Conclusions  
+## Topics for Discussion    
+
+.pad-left[
+
+- Every RCT intervention is an interaction:
+
+    - gut microbiota community composition varies over time  
+    
+    - account for changes in diet & medications, environment  
+
+- RCTs can overcome effect modification if:  
+
+    - very precise disease phenotype (less likely time-varying gut microbiota)  
+    
+    - precision medicine: tailor treatment to near-real-time measures of gut microbiota  
+    
+    - interventions with huge effects (antibiotic conditioning prior to FMT)  
+
+- How to translate lessons from FMT trials to the LBP era?   
+
+]
 
 
 
