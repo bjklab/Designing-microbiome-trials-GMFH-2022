@@ -39,7 +39,7 @@ xaringanExtra::use_share_again()
 
 ---
 class: top left hide-count
-background-image: url(img/cdc-QEU-QgIOJKA-unsplash_dark.jpg)
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_darkest.jpg)
 background-size: cover
 
 .move-top20[
@@ -151,11 +151,11 @@ class: full-screen hide-count
 
     - selection bias (subjects ≠ population)
 
-    - "trial interventions are interactions"  
-    (subject features modify effect of trial intervention)
+    - "trial interventions are interactions" resulting in heterogenous effects    
+    (subject features modify effect of trial intervention)  
 
-    - "subjects aren't even representative of themselves"  
-    (time-varying features can interact with trial intervention)
+    - "subjects aren't even fully representative of themselves"  
+    (<u>time-varying features</u> also interact with trial intervention)
    
 ]
 
@@ -164,18 +164,71 @@ class: full-screen hide-count
 
 ---
 
-## The Time-Varying Gut Microbiome    
+## Time-Varying Gut Microbiota  
 
-.pull-left[
+```{r omega_squared, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', out.width='110%'}
 
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='85%'}
-knitr::include_graphics(path = "figs/kelly_iche_2021_cx.png")
+knitr::include_graphics(path = "./img/kelly_bioinf_2016.png")
+
+
 ```
 
+
+.footnote-left[Kelly et al _Bioinformatics_ 2015] 
+
+
+---
+
+## Time-Varying Gut Microbiota  
+
+.pad-left[  
+  
+- Dietary changes and antibiotics exert large effects...  
+
+ ... larger effects when followed by colonization from healthcare environment   
+
+- Gut microbiota at time of intervention ≠ microbiota at time of enrollment:  
+
+    - misclassification of inclusion criteria kills randomized trials  
+    
+    - "the medicine doesn't work if the patient isn't sick"  
+    
+    - microbiome trials run a **high risk of inclusion misclassification**   
+
+]  
+
+
+.footnote-left[Kelly et al _ICHE_ 2021] 
+
+
+---
+
+## How Microbiota Trials Go <u>Right</u>  
+
+.pad-left[
+
+- RCTs can overcome effect modification by changing gut microbiota if:  
+
+    - very precise disease phenotype (less likely time-varying gut microbiota)  
+    
+    - precision medicine: tailor treatment to near-real-time measures of gut microbiota  
+    
+    - interventions with huge effects (antibiotic conditioning prior to FMT)  
+  
 ]
 
 
-.footnote-left[Kelly et al _ICHE_ 2021]  
+
+---
+layout: false
+class: full-screen hide-count
+
+<div class="grid-3-1">
+<div class="extension-tile gridset-grey"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-b"><div>RCTs of FMT</div></div>
+<div class="extension-tile gridset-grey"><div>Strategies for<br>the LBP Era</div></div>
+</div>
+
 
 
 ---
@@ -226,135 +279,39 @@ knitr::include_graphics(path = "figs/kelly_iche_2021_cx.png")
 
 
 ---
-exclude: true
+layout: false
+class: full-screen hide-count
 
-## Repopulation & Recurrent Infection      
-  
-.pad-left[  
-  
-- Study of post-infection recurrence:  
-
-    - 10,855 heme-onc patients admitted to HUP from 2010-2011      
-
-    - 7819 (72%) with blood, respiratory, or urine culture obtained
-    
-    - 1042 (9.6%) +blood cx, 215 (2.0%) +resp cx, 845 (7.8%) +urine cx  
-    
-    - same genus recurrence: 286 (28.6%) blood, 58 (29.0%) resp, 272 (34.0%) urine  
-    
-    - other genus recurrence: 208 (20.8%) blood, 35 (17.5%) resp, 88 (11.0%) urine  
-    
-    - examine time to post-infection recurrence ...       
-  
-    
-]  
-
-.footnote-left[Ziegler MJ et al. Submitted.]  
-
-
----
-
-## Repopulation & Recurrent Infection      
-  
-.pad-left[  
-  
-- Study of post-infection recurrence:  
-
-    - 10,855 heme-onc patients admitted to HUP from 2010-2021      
-
-    - 7819 (72%) with blood, respiratory, or urine culture obtained:  
-    
-```{r, warning=FALSE, error=FALSE, echo=FALSE, message=FALSE}
-
-tribble(~ "Infection", ~ "Total Subjects", ~ "Recurrent - Same Genus", ~ "Recurrent - Different Genus",
-        "Bloodstream", "1042 (9.6%)", "286 (28.6%)", "208 (20.8%)",
-        "Respiratory", "215 (2.0%)", "58 (29.0%)", "35 (17.5%)",
-        "Urine", "845 (7.8%)", "272 (34.0%)", "88 (11.0%)") %>%
-  gt() %>%
-  tab_options(column_labels.font.size = 20,
-              column_labels.font.weight = "bold",
-              table.font.size = 20)
-
-```
-  
-- Examine time to post-infection recurrence ...       
-  
-]  
-
-.footnote-left[Ziegler MJ et al. Manuscript in preparation.]  
-
-
----
-background-image: url(figs/p_hurdle_gap_same_vs_other_genus_tp.png)
-background-size: contain
-
-
-
-.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
-
-
----
-background-image: url(figs/p_hurdle_gap_same_genus_f_cxtype_r_genus_after14_tp.png)
-background-size: contain
-
-
-
-.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
-
-
-
----
-background-image: url(figs/p_abx.png)
-background-size: contain
-
-
-
-.footnote-left[Ziegler MJ et al. Manuscript in preparation.]
+<div class="grid-3-1">
+<div class="extension-tile gridset-grey"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-grey"><div>RCTs of FMT</div></div>
+<div class="extension-tile gridset-c"><div>Strategies for<br>the LBP Era</div></div>
+</div>
 
 
 
 ---
 
-## Future Directions      
-  
-.pad-left[  
-  
-- <u>Post-antibiotic repopulation</u>:      
+## LBPs  
 
-    - demographic features → recurrent infection risk  
-    
-    - oncology diagnosis → recurrent infection risk  
-    
-    - antibiotic exposure → repopulation → recurrent infection risk  
-
-
-]  
-
-.footnote-left[Davar et al _Science_ 2021; Schubert et al _Frontiers Immun_ 2021; Cubillos-Ruiz et al _Nat Rev Drug Disc_ 2021]  
 
 
 
 ---
+layout: false
+class: full-screen hide-count
 
-## Work to Understand Repopulation        
-  
-.pad-left[  
-  
-- Bacterial ecology of infection:
+<div class="grid-3-1">
+<div class="extension-tile gridset-a animated flipInY"><div>How Randomized Trials Go Wrong</div></div>
+<div class="extension-tile gridset-b animated flipInX"><div>RCTs of FMT</div></div>
+<div class="extension-tile gridset-c animated flipInY"><div>Strategies for<br>the LBP Era</div></div>
+</div>
 
-    - ventilator-associated pneumonia (VAP)  
-    
-    - _C. difficile_ infection  
-  
-- Microbiome change during & after antibiotics    
-  
-- Engineering post-antibiotic repopulation:  
 
-    - antibiotic conditioning & transplant  
-    
-    - *post-induction consolidation therapy with bacteriophage*    
-  
-]  
+---
+
+## Conclusions  
+
 
 
 ---
@@ -406,7 +363,7 @@ Clifford McDonald, Alison Laufer Halpin
 
 ---
 class: middle center hide-count
-background-image: url(img/cdc-QEU-QgIOJKA-unsplash_dark.jpg)
+background-image: url(img/cdc-QEU-QgIOJKA-unsplash_darkest.jpg)
 background-size: cover
 
 .title-subtext[brendank@pennmedicine.upenn.edu]
